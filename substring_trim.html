@@ -1,0 +1,40 @@
+<!-- clientsc25j.htm -->
+<!-- an example of using string processing functions -->
+<html>
+ <head>
+  <title> string functions example </title>
+ <script language="javascript">
+ <!--
+function mytrim(mytext) { 
+    x = mytext; 
+    while (x.substring(0,1) == ' ') 
+  x = x.substring(1); 
+    while (x.substring(x.length-1,x.length) == ' ') 
+  x = x.substring(0,x.length-1); 
+    return x 
+} 
+
+
+  function cmdenterclick()
+  {
+     var s1;
+     s1 = mytrim(prompt("please enter your full name", "your name here"))
+     var strfirst, strlast, strmiddle
+     var posblank
+     posblank = s1.indexOf(" ",0) ; // 0 is start position
+     var countfromright
+     countfromright = s1.length-posblank
+     alert("first name = " + s1.substring(0,posblank) + "\n" +
+       "last name = " + mytrim(s1.substring(posblank,posblank+countfromright)));
+   }
+ -->
+</script>
+</head>
+ <body>
+   <h3> string processing example </h3>
+   <h2> click on the button below to do some string processing </h2>
+   <hr>
+   <input type="button" name=cmdenter value="test of string functions"
+    onclick="cmdenterclick();">
+ </body>
+</html>

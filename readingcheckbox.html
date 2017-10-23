@@ -1,0 +1,44 @@
+<!-- clientsc3j.htm -->
+<html>
+  <head>
+    <title> client side javascript-reading data from check boxes </title>
+
+  <script language="javascript">
+  <!--
+   function readcheckboxes(){
+    var stringchecked = "";
+    if(document.frmdata.chksalad.checked){
+      stringchecked = "\n" + "Salad";
+    }
+    if(document.frmdata.chkrice.checked == true){
+      stringchecked = stringchecked + "\n" + "Rice" ;
+    }
+    if(document.frmdata.chkfish.checked == true){
+      stringchecked = stringchecked + "\n" + "Fish";
+    }
+    if(document.frmdata.chkdsrt.checked == true){
+      stringchecked = stringchecked + "\n" + "Dessert";
+    }
+
+    alert("Data is:" + stringchecked);
+   }
+  -->
+  </script>
+
+  </head>
+  <body>
+    <h2> <center> client side scripting </center> </h2>
+    <h3> <center> using the check box input control </center></h3>
+    <hr>
+    check the items you would like in your dinner
+    <form name=frmdata>
+      <pre>
+         <input type=checkbox name=chksalad> salad 
+         <input type=checkbox name=chkrice> rice
+         <input type=checkbox name=chkfish> fish
+         <input type=checkbox name=chkdsrt> dessert
+      </pre>
+      <input type=button name=cmdcb value="submit choices" onclick="readcheckboxes();">
+    </form>
+  </body>
+<html>

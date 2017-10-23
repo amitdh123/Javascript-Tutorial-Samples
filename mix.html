@@ -1,0 +1,82 @@
+<!-- clientsc31j.htm -->
+<html>
+ <head>
+  <!-- addition of onblur event handler -->
+  <title> feedbackk on your shopping experience with webshop.com </title>
+<script language="javascript">
+<!--
+ function window_onload() {
+  frmfeedback.txtemail.focus();
+ }
+
+ function txtemail_onblur() {
+   var stremail;
+   stremail =  frmfeedback.txtemail.value ;   
+   if (stremail == "") {
+     alert("you must not leave e-mail blank");
+     frmfeedback.txtemail.focus();}
+ }
+-->
+</script>
+<script language = vbscript>
+<!--
+ sub cmdsubmit_onclick
+ dim strmail,strcomments,strmsg,ncount,strrating
+ strmail = frmfeedback.txtemail.value
+ strcomments =  frmfeedback.txacomments.value   
+ if trim(strmail) = "" then
+     msgbox "you must provide an e-mail address.",16
+     else if trim(strcomments) = "" then
+      msgbox "you must provide comments.",16
+       else
+          for ncount = 1 to 6
+             if frmfeedback.elements(ncount).checked then
+                strrating = frmfeedback.elements(ncount).value
+                exit for
+             end if
+          next
+          strmsg = "you rated our your experience as: " & strrating & _ 
+                    "." & chr(10) & chr(13)
+          strmsg = strmsg & "your e-mail address is " & frmfeedback.txtemail.value 
+          if frmfeedback.shopagain(0).checked = true then
+           strmsg = strmsg & chr(13) & chr(10) & "you will shop again with us " 
+    else
+       strmsg = strmsg & chr(13) & chr(10) & _
+        "your shopping experience has been negative"
+    end if
+          msgbox strmsg,48
+          msgbox "your comments have been submitted.",48
+       end if
+  end if 
+end sub
+-->
+</script>
+ </head>
+ <body onload="window_onload();">
+ <h2> feedback on your shopping experience with webshop.com </h2>
+ <h3> please fill out the feedback form below. 
+      your comments are highly appreciated </h3>
+ <hr>
+ <form name="frmfeedback">
+  <pre>
+    <b>e-mail address:</b> <input name="txtemail" size=35 maxlength=35 value = ""
+                     onblur="txtemail_onblur()">
+    <b>your shopping experience with webshop.com has been:</b>
+    rating: <input type="radio" name="rating" value="excellent" checked> excellent
+            <input type="radio" name="rating" value="very good" > very good
+            <input type="radio" name="rating" value="good" > good
+            <input type="radio" name="rating" value="fair" > fair
+            <input type="radio" name="rating" value="poor" > poor
+
+    <b>would you shop again with us:</b>
+    <input type=radio name="shopagain" checked value=yes> yes 
+    <input type=radio name="shopagain" value=no> no
+    <b>general comments</b>
+
+    <textarea name="txacomments" rows="5" cols="60"></textarea>
+    <input type="button" name="cmdsubmit" value="submit feedback">  <input
+               type="reset" value="reset">
+  </pre>
+ </form>
+ </body>
+</html>

@@ -1,0 +1,53 @@
+<!-- clientsc11j.htm -->
+<html>
+ <head>
+    <title> adder with data validation - javascript </title>
+
+
+
+
+<script type="text/javascript">
+<!--
+ function cmdadd_onclick() {
+   var v1, v2 ;
+   var rs ;
+   var v1val, v2val ;
+   /* --------------- read and validate value 1 */
+   v1val=parseFloat(document.frmcalc.val1.value) ;
+   if (isNaN(v1val))
+    {
+     alert("you must enter a number in box1") ;
+     frmcalc.val1.value="" ;
+     return;
+    }
+ 
+   /* -------------- read and validate value 2 */
+   v2val=parseFloat(document.frmcalc.val2.value) ;
+   if (isNaN(v2val))
+    {
+     alert("you must enter a number in box2") ;
+     frmcalc.val2.value="" ;
+     return;
+    }
+ 
+  /* ------ do the calculation */
+   rs = v1val + v2val;
+   window.document.frmcalc.result.value = rs ;
+ }
+-->
+</script>
+</head>
+<body>
+  <h1> web adder with data validation </h1>
+  <pre>
+    <form name=frmcalc method="" action="">
+       value1: <input name=val1>
+       value2: <input name=val2>
+         -----------------
+       result: <input name=result>
+
+       <input type=button name=cmdadd value=+ onclick="cmdadd_onclick();">  
+    </form>
+  </pre>
+</body>
+</html>

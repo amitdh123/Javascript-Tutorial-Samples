@@ -1,0 +1,25 @@
+<!-- JSEx3.htm -->
+<html>
+<head>
+  <title> Javascript Prompt Example </title>
+ <script type="text/javascript">
+ function f1()
+ {
+   message = prompt("Please enter a message","Hello Javascript"); 
+   if (message == null)
+     alert("You chose cancel");
+   else
+     alert("You typed the message:\n" + message);
+ }
+ </script>
+</head>
+<body>
+ The prompt function has the general form as: <br>
+ ret = prompt("question text","default answer");<br><br>
+ The ret valye will be null if the user chose "cancel" else <br>
+ it will return the message typed by the user in the text field.
+ <script language="javascript">
+   f1();
+ </script>
+</body>
+</html>

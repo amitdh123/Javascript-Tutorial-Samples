@@ -1,0 +1,32 @@
+<!-- clientsc30j.htm -->
+<html>
+ <head>
+  <!-- example of window_onload event -->
+  <title> a colorful start to the web page </title>
+<script language="javascript">
+<!--
+ function window_onLoad() {
+  var colornum, bcolor;
+  colornum = Math.round(Math.random() * 8);
+  alert(colornum);
+  switch(colornum) {
+    case 0 : bcolor = "green"; break;
+    case 1 : bcolor = "blue";  break;
+    case 2 : bcolor = "yellow";break;
+    case 3 : bcolor = "lime";  break;
+    case 4 : bcolor = "aqua";  break;
+    case 5 : bcolor = "silver"; break;
+    case 6 : bcolor = "purple"; break;
+    case 7 : bcolor = "orange"; break;
+   default : bcolor = "red"; 
+  }
+  document.bgColor = bcolor ;
+}
+-->
+</script>
+ </head>
+ <body onLoad="window_onLoad();">
+ <h2> possibly a a different color each time the 
+           document is loaded or refreshed </h2>
+  </body>
+</html>

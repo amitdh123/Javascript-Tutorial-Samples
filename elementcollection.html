@@ -1,0 +1,56 @@
+<!-- clientsc17j.htm -->
+<html>
+<head>
+<script language="javascript">
+<!--
+  function cmdsubmit_onclick(){
+    var i , final_value = "";
+    var user_email = document.frmguestbook.txtemail.value;
+    var user_comments = document.frmguestbook.txacomments.value;
+    if(user_email == ""){
+      alert("Please enter the email address");
+    } else if(user_comments == ""){
+      alert("Dont forget to provide your comments");
+    } else {
+      for( i=0 ; i<document.frmguestbook.rating.length ; i++){
+        if(document.frmguestbook.rating[i].checked == true){
+          final_value = final_value + document.frmguestbook.rating[i].value;
+          break;
+        }
+      }
+
+      final_value = "Your Rating is: " + final_value + "\n";
+      final_value = final_value + "Your email is:" + user_email + "\n" + "Your comments are:" + user_comments;
+      alert(final_value);
+      alert("Your comment is submitted");
+    }
+  }
+</script>
+
+<title> javascript - user input examples</title>
+<h2>guest book</h2>
+<h4>what do you think of our web site? please provide your comments.</h4>
+<hr>
+</head>
+<body>
+<form name="frmguestbook">
+<pre>
+e-mail address: <input name="txtemail" size=40 maxlength=40 value = "">
+
+rating: <input type="radio" name="rating" value="excellent" checked> excellent
+        <input type="radio" name="rating" value="very good" > very good
+        <input type="radio" name="rating" value="good" > good
+        <input type="radio" name="rating" value="fair" > fair
+        <input type="radio" name="rating" value="poor" > poor
+
+general comments
+
+<textarea name="txacomments" rows="5" cols="80"></textarea>
+
+
+<input type="button" name="cmdsubmit" value="submit comments"
+             onclick="cmdsubmit_onclick();"> <input type="reset" value="reset">
+</pre>
+</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- clientsc4j.htm -->
+<html>
+  <head>
+    <title> client side scripting - reading data from radio buttons </title>
+
+  <script language="javascript">
+  <!--
+   function cmdsubmit_onclick(){
+    var i , stringchecked = "" ;
+    for(i=0;i<document.frmdata.optdinneritem.length;i++){
+      if(document.frmdata.optdinneritem[i].checked == true){
+        stringchecked = document.frmdata.optdinneritem[i].value + "\n";
+      }
+    }
+
+    for(i=0;i<document.frmdata.optdessertitem.length; i++){
+      if(document.frmdata.optdessertitem[i].checked == true){
+        stringchecked = stringchecked + document.frmdata.optdessertitem[i].value;
+      }
+    }
+
+    alert(" Dinner Items are" + "\n" + stringchecked);
+   }
+  -->
+  </script>
+
+  </head>
+  <body>
+    <h2> <center> client side scripting </center> </h2>
+    <h3> <center> using the radio button control </center></h3>
+    <h4> <center> (also referred to as option button sometimes) </center> </h4>
+    <hr>
+    <h4> choose a main dinner item </h4>
+    <form name=frmdata>
+     <pre>
+      pizza <input type=radio name=optdinneritem value="pizza" checked> 
+      steak <input type=radio name=optdinneritem value="steak"> 
+      fish  <input type=radio name=optdinneritem value="fish"> 
+      <hr>
+<h4> choose a dessert </h4>
+      chocolate cake  <input type=radio name=optdessertitem value="chocolate cake" checked> 
+      cheese cake     <input type=radio name=optdessertitem value="cheese cake"> 
+      icecream sundae <input type=radio name=optdessertitem value="icecream sundae">
+      <hr>
+
+      <input type=button value="submit dinner and dessert choices" name="cmdsubmit"
+                 onclick="cmdsubmit_onclick();"> 
+    </pre>      
+    </form>
+  </body>
+<html>

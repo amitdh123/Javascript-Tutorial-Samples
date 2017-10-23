@@ -1,0 +1,56 @@
+<!-- Clientsc17J.htm -->
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+function cmdSubmit_OnClick () {
+var lcemail,lcComments,lcMsg,lnCount,lcRating;
+lcemail = frmGuestBook.txtemail.value ;
+lcComments =  frmGuestBook.txacomments.value ; 
+if (lcemail == "")
+     alert("You must provide an E-mail address.");
+  else if (lcComments == "") 
+          alert( "You must provide a comment.");
+       else {
+          for (lncount = 1; lncount <= 6; lncount++) {
+             if (document.frmGuestBook.elements[lncount].checked == true) { 
+                lcRating = document.frmGuestBook.elements[lncount].value ;
+                break; }
+             }
+          lcMsg = "You rated our web site as: " + lcRating + "." + "\n \t" ;
+          lcMsg = lcMsg + "Your E-mail address is " + frmGuestBook.txtemail.value 
+          lcMsg = lcMsg + "\nComments:" +frmGuestBook.txacomments.value
+	  alert(lcMsg) ;
+          alert("Your comments have been submitted.");
+       }
+ }
+-->
+</SCRIPT>
+
+<TITLE> Javascript - User Input Examples</TITLE>
+<H2>Guest Book</H2>
+<H4>What do you think of our Web site? Please provide your comments.</H4>
+<HR>
+</HEAD>
+<BODY>
+<FORM NAME="frmGuestBook">
+<PRE>
+E-mail Address: <INPUT NAME="txtemail" SIZE=40 MAXLENGTH=40 VALUE = "">
+
+Rating: <INPUT TYPE="radio" NAME="rating" VALUE="Excellent" CHECKED> Excellent
+        <INPUT TYPE="radio" NAME="rating" VALUE="Very Good" > Very Good
+        <INPUT TYPE="radio" NAME="rating" VALUE="Good" > Good
+        <INPUT TYPE="radio" NAME="rating" VALUE="Fair" > Fair
+        <INPUT TYPE="radio" NAME="rating" VALUE="Poor" > Poor
+
+General Comments
+
+<TEXTAREA NAME="txacomments" ROWS="5" COLS="80"></TEXTAREA>
+
+
+<INPUT TYPE="button" NAME="cmdSubmit" VALUE="Submit Comments"
+             onClick="cmdSubmit_OnClick();"> <INPUT TYPE="reset" VALUE="Reset">
+</PRE>
+</FORM>
+</BODY>
+</HTML>

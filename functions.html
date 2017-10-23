@@ -1,0 +1,62 @@
+<!-- clientsc12j.htm -->
+<html>
+ <head>
+    <title> adder with data validation - use of functions </title>
+<script language=javascript>
+<!--
+  //--------------- validate() --------------------------
+  function validate(val, position)
+  {
+   res = ""
+   if (!isnan(val))
+     res = parsefloat(val)
+   else
+    { 
+     alert("you must enter a number in box" + position);
+     res = "";
+     if (position == 1)
+        document.frmcalc.val1.value=""
+     else
+        document.frmcalc.val2.value=""
+    }
+    return res;
+   }
+//---------------------------------------------------------
+
+//-------------------cmdadd_onclick()---------------
+  function cmdadd_onclick()
+  {
+   var v1, v2, rs
+   var v1val, v2val
+   //--------------- read and validate value 1
+   v1 = document.frmcalc.val1.value 
+   v1val = validate(v1,1)
+   if (v1val == "") 
+      return;
+   //-------------- read and validate value 2
+   v2 = document.frmcalc.val2.value 
+   v2val = validate(v2,2)
+   if (v2val == "") 
+     return;
+   rs = v1val + v2val;    // do the calculation
+   document.frmcalc.result.value = rs
+  }
+//------------------------------------------------- 
+-->
+</script>
+</head>
+<body>
+  <h1> web adder with data validation </h1>
+  <h3> user defined functions </h3>
+  <pre>
+    <form name=frmcalc method="" action="">
+       value1: <input name=val1>
+       value2: <input name=val2>
+         ----------------------------
+       result: <input name=result>
+       <input type=button name=cmdadd value="+" onclick="cmdadd_onclick()">  
+    </form>
+  </pre>
+</body>
+</html>
+

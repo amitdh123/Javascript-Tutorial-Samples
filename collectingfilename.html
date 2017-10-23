@@ -1,0 +1,29 @@
+<!-- clientsc8j.htm -->
+<html>
+  <head>
+    <title> client side scripting - collecting filename from file control </title>
+
+  <script language="javascript">
+  <!--
+   function cmdsubmit_onclick() {
+      var filename = document.frmdata.fildatafile.value ;
+      alert(filename);
+   }
+  -->
+  </script>
+  </head>
+  <body>
+    <h2> <center> client side scripting </center> </h2>
+    <h3> <center> collecting file name from file type input control </center></h3>
+   <pre> 
+   click on the button to show file open dialog:
+   <form name=frmdata>
+     
+     <input type=file name=fildatafile size=50> 
+     <hr>
+     <input type=button value="check file name submitted" name="cmdsubmit"
+            onclick="cmdsubmit_onclick();"> 
+    </form>
+   </pre>
+  </body>
+<html>

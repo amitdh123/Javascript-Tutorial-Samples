@@ -1,0 +1,46 @@
+<!-- clientsc6j.htm -->
+<html>
+  <head>
+    <title> client side scripting - javascript reading data from list box </title>
+
+  <script language="javascript">
+  <!--
+    function cmdsubmit_onclick(){
+      var i , selectfruit = "" ; 
+      for(i=0 ; i< document.frmdata.lstfruit.length ; i++){
+        if(document.frmdata.lstfruit[i].selected == true){
+          selectfruit = selectfruit + document.frmdata.lstfruit[i].value + "\n";
+          //selectfruit = selectfruit + "\n";
+        }
+      }
+      alert("Selected Fruits are: " + selectfruit);
+    }
+  -->
+  </script>
+
+  </head>
+  <body>
+    <h2> <center> client side scripting </center> </h2>
+    <h3> <center> reading data from the list box control </center></h3>
+    <h4> <center> (use size attribute to change a drop down to a list box) 
+          </center> </h4>
+    <h4> <center> (use multiple attribute to allow multiple selections) 
+          </center> </h4>
+    <hr>
+    <h4> choose one or more fruits </h4>
+    <form name=frmdata>
+     <pre>
+      <select name=lstfruit multiple> 
+          <option value=orange> orange
+          <option value=apple selected> apple 
+        <option value=bannana> bannana
+    <option value=mango> mango
+  </select>
+      <hr>
+
+      <input type=button value="submit fruit choices" name="cmdsubmit"
+             onclick="cmdsubmit_onclick();"> 
+     </pre>      
+    </form>
+  </body>
+<html>

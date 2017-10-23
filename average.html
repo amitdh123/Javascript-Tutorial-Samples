@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title> client side scripting javascript - writing your own functions </title>
+
+  <script type = "text/javascript">
+  <!--
+    function find_average(n1,n2,n3){
+      var average;
+      average = (n1+n2+n3) / 3;
+      return average;
+  }
+
+  function cmdave_onclick(){
+
+    var number1 = parseFloat(document.frmmin.txtv1.value);
+    var number2 = parseFloat(document.frmmin.txtv2.value);
+    var number3 = parseFloat(document.frmmin.txtv3.value);
+    
+
+    var calculated_average = find_average(number1 , number2 ,  number3);
+
+    alert("Average of numbers is:" + calculated_average);
+  }
+    
+  -->
+  </script>
+  </head>
+  <body>
+    <h2> <center> javascript client side scripting </center> </h2>
+    <h3> <center> writing your own functions - finding minimum </center></h3>
+   <pre> 
+   enter some numbers in the three text boxes, then click on the 
+   "calculate min" button to find the minimum of the three numbers entered:
+     <form name=frmmin>  
+     enter first number  : <input type=text name=txtv1>      
+     enter second number : <input type=text name=txtv2>
+     enter third number  : <input type=text name=txtv3>
+   <input type=button name=cmdmin value="calculate Average" onclick="cmdave_onclick();">
+   </form>
+   </pre>
+  </body>
+<html>

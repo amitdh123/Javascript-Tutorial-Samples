@@ -1,0 +1,30 @@
+<html>
+ <head>
+  <title> a strange adder </title>
+<script language=javascript>
+<!--
+  function btnaddclick()
+  {
+   var v1, v2, rs;
+   v1 = parseFloat(document.f1.val1.value);
+   v2 = parseFloat(document.f1.val2.value);
+   rs = v1 + v2;
+   document.f1.result.value = rs;
+  } 
+-->
+</script>
+ </head>
+ <body> 
+   <h1> web adder </h1>
+   <pre>
+   <form name=f1>
+        value1: <input name=val1>
+        value2: <input name=val2>
+          -----------------
+        result: <input name=result>
+
+        <input type=button name="btnadd" value="+" onclick="btnaddclick()">
+   </form>
+   </pre>
+  </body>
+</html>

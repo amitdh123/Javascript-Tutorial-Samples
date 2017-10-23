@@ -1,0 +1,37 @@
+<!-- clientsc5j.htm -->
+<html>
+  <head>
+    <title> client side scripting - reading data from drop down list box </title>
+
+  <script language="javascript">
+  <!--
+   function cmdsubmit_onclick() {
+      alert("Fruit choosen is:" + document.frmdata.ddlfruit.value);
+   }  
+   -->
+  </script>
+
+  </head>
+  <body>
+    <h2> <center> client side scripting </center> </h2>
+    <h3> <center> reading data from the drop down list box control </center></h3>
+    <h4> <center> (select and option tags are used to create the list box) 
+          </center> </h4>
+    <hr>
+    <h4> choose a fruit </h4>
+    <form name=frmdata>
+     <pre>
+      <select name=ddlfruit> 
+          <option value=orange> orange
+          <option value=apple selected> apple 
+        <option value=bannana> bannana
+    <option value=mango> mango
+  </select>
+      <hr>
+
+      <input type=button value="submit fruit choices" name="cmdsubmit" 
+            onclick="cmdsubmit_onclick();"> 
+     </pre>      
+    </form>
+  </body>
+<html>
